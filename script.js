@@ -250,7 +250,7 @@ function calculateTotalB(subject) {
       notes: document.getElementById("math-notes").value || "",
       customNotes: document.getElementById("custom-math-notes").value || "",
     };
-    const kalaaData = {
+    const kalaaData = { 
       sub1: document.getElementById("kalaa-sub1").value || 0,
       sub2: document.getElementById("kalaa-sub2").value || 0,
       sub3: document.getElementById("kalaa-sub3").value || 0,

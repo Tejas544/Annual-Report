@@ -49,7 +49,7 @@ const marathiData = JSON.parse(localStorage.getItem("marathiData"));
 if (marathiData) {
   document.getElementById("marathi-sub1-display").textContent = marathiData.sub1;
   document.getElementById("marathi-sub2-display").textContent = marathiData.sub2;
-  document.getElementById("marathi-sub3-display").textContent = marathiData.sub3;
+  document.getElementById("marathi-sub3-display").textContent = marathiData.sub3; 
   document.getElementById("marathi-sub4-display").textContent = marathiData.sub4;
   document.getElementById("marathi-sub5-display").textContent = marathiData.sub5;
   document.getElementById("marathi-sub6-display").textContent = marathiData.sub6;
