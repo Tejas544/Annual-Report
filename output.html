@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Report Card</title>
+  <link rel="stylesheet" href="styles2.css"> 
+</head>
+<body>
+  <div class="report-container">
+    <h1>सातत्यपूर्ण सर्वंकष मूल्यमापन नोंदपत्र सत्र <span id="session">[Session]</span> सन 20<span id="year1"></span>-20<span id="year2"></span></h1>
+
+    <div class="student-details">
+      <h3>विद्यार्थ्याचे नाव: <span id="student-name">[Name]</span></h3>
+      <h3>इयत्ता: <span id="student-class">[Class]</span></h3>
+      <h3>क्रमांक: <span id="student-roll">[Roll Number]</span></h3>
+    </div>
+    <hr>
+    <h3>शाब्दिक वर्णनात्मक नोंदी</h3>
+    <table> 
+      <tbody>
+        <tr>
+          <td>मराठी</td>
+          <td id="marathi-notes-display"></td>
+        </tr>
+        <tr>
+          <td>परिसर-१</td>
+          <td id="science1-notes-display"></td>
+        </tr>
+        <tr>
+          <td>इंग्रजी</td>
+          <td id="math-notes-display"></td>
+        </tr>
+        <tr>
+          <td>गणित</td>
+          <td id="english-notes-display"></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Subject marks table -->
+    <table class="marks-table">
+      <thead>
+        <tr>
+          <th rowspan="3">क्र.</th>
+          <th rowspan="2" colspan="2">तपशिल</th>
+          <th colspan="8">(अ) आकारिक मूल्यमापन</th>
+          <th colspan="4" rowspan="2">(ब) संकलित मूल्यमापन</th>
+          <th rowspan="3">अ+ब</th>
+          <th rowspan="3">श्रेणी</th>
+        </tr>
+        <tr>
+          <th>दैनंदिन निरीक्षण</th>
+          <th>तोंडी काम</th>
+          <th>प्रात्यक्षिक</th>
+          <th>उपक्रम</th>
+          <th>प्रकल्प</th>
+          <th>चाचणी</th>
+          <th>वर्ग काम</th>
+          <th></th>
+        </tr> 
+        </tr>
+        <tr>
+          <th colspan="2">विषय</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>एकूण</th>
+          <th>तोंडी</th>
+          <th>प्रात्य.</th>
+          <th>लेखी</th>
+          <th>एकूण</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Marathi Row -->
+        <tr>
+          <td rowspan="2">1</td>
+          <td rowspan="2">मराठी</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>10</th>
+          <th>10</th>
+          <th>10</th>
+          <th>-</th>
+          <th>20</th>
+          <th>10</th>
+          <th id="marathi-total-display" rowspan="2"></th>
+          <th>10</th>
+          <th>-</th>
+          <th>30</th>
+          <th id="marathi-total-display2" rowspan="2"></th>
+          <th id="total-marathi3" rowspan="2"></th>
+          <th id="grade-marathi" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="marathi-sub1-display"></td>
+          <td id="marathi-sub2-display"></td>
+          <td id="marathi-sub3-display"></td>
+          <td id="marathi-prakalp"></td>
+          <td id="marathi-sub4-display"></td>
+          <td id="marathi-sub5-display"></td>
+          <td id="marathi-sub6-display"></td>
+          <td id="marathi-pratya"></td>
+          <td id="marathi-sub7-display"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">2</td>
+          <td rowspan="2">परिसर-१</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>10</th>
+          <th>10</th>
+          <th>10</th>
+          <th>-</th>
+          <th>20</th>
+          <th>10</th>
+          <th id="science1-total-display" rowspan="2"></th>
+          <th>10</th>
+          <th>-</th>
+          <th>30</th>
+          <th id="science1-total-display2" rowspan="2"></th>
+          <th id="total-science13" rowspan="2"></th>
+          <th id="grade-science1" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="science1-sub1-display"></td>
+          <td id="science1-sub2-display"></td>
+          <td id="science1-sub3-display"></td>
+          <td id="science1-prakalp"></td>
+          <td id="science1-sub4-display"></td>
+          <td id="science1-sub5-display"></td>
+          <td id="science1-sub6-display"></td>
+          <td id="science1-pratya"></td>
+          <td id="science1-sub7-display"></td>
+        </tr>
+        
+        <tr>
+          <td rowspan="2">3</td>
+          <td rowspan="2">इंग्रझी</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>10</th> 
+          <th>10</th>
+          <th>10</th>
+          <th>-</th>
+          <th>20</th>
+          <th>10</th>
+          <th id="english-total-display" rowspan="2"></th>
+          <th>10</th>
+          <th>-</th>
+          <th>30</th>
+          <th id="english-total-display2" rowspan="2"></th>
+          <th id="english-total3" rowspan="2"></th>
+          <th id="grade-english" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="english-sub1-display"></td>
+          <td id="english-sub2-display"></td> 
+          <td id="english-sub3-display"></td>
+          <td id="english-prakalp"></td>
+          <td id="english-sub4-display"></td>
+          <td id="english-sub5-display"></td>
+          <td id="english-sub6-display"></td>
+          <td id="english-pratya"></td>
+          <td id="english-sub7-display"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">4</td>
+          <td rowspan="2">गणित</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>10</th> 
+          <th>10</th>
+          <th>10</th>
+          <th>-</th>
+          <th>20</th>
+          <th>10</th>
+          <th id="math-total-display" rowspan="2"></th>
+          <th>10</th>
+          <th>-</th>
+          <th>30</th>
+          <th id="math-total-display2" rowspan="2"></th>
+          <th id="math-total3" rowspan="2"></th>
+          <th id="grade-math" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="math-sub1-display"></td>  
+          <td id="math-sub2-display"></td>
+          <td id="math-sub3-display"></td>
+          <td id="math-prakalp"></td>
+          <td id="math-sub4-display"></td>
+          <td id="math-sub5-display"></td>
+          <td id="math-sub6-display"></td>
+          <td id="math-pratya"></td>
+          <td id="math-sub7-display"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">5</td>
+          <td rowspan="2">परिसर-2</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>10</th>
+          <th>10</th>
+          <th>10</th>
+          <th>-</th>
+          <th>20</th>
+          <th>10</th>
+          <th id="science2-total-display" rowspan="2"></th>
+          <th>10</th>
+          <th>-</th>
+          <th>30</th>
+          <th id="science2-total-display2" rowspan="2"></th>
+          <th id="total-science23" rowspan="2"></th>
+          <th id="grade-science2" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="science2-sub1-display"></td>
+          <td id="science2-sub2-display"></td>
+          <td id="science2-sub3-display"></td>
+          <td id="science2-prakalp"></td>
+          <td id="science2-sub4-display"></td>
+          <td id="science2-sub5-display"></td>
+          <td id="science2-sub6-display"></td>
+          <td id="science2-pratya"></td>
+          <td id="science2-sub7-display"></td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <!-- Footer -->
+    <div class="report-footer">
+      <p>शिक्षकांची स्वाक्षरी: ______________________</p>
+      <p>मुख्याध्यापकांची स्वाक्षरी: ______________________</p>
+      <p>केंद्रप्रमुखांची स्वाक्षरी: ______________________</p>
+    </div>
+  </div>
+  <script src="script2.js"></script> 
+</body>
+</html>

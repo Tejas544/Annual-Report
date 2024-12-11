@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Table Border Fix</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td, th {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .nested-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .nested-table td {
+            border :0px;
+            border-bottom:1px solid black ; /* Remove nested table borders */
+            padding: 0; /* Ensure alignment with parent cell */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Heading1</th>
+                <th>Heading1</th>
+                <th>Heading1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table class="nested-table">
+                        <tr>
+                            <td>Row1</td>
+                        </tr>
+                        <tr>
+                            <td>Row2</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

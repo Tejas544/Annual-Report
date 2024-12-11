@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Annual Report</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head> 
+<body>  
+  <div id="student-details-modal" class="modal">
+    <div class="modal-content">
+      <h2>विद्यार्थ्याची माहिती भरा</h2>
+      <form id="student-details-form">
+
+        <label for="session-input">सत्र:</label>
+        <input type="text" id="session-input" required />
+
+        <label for="year1-input">वर्ष:20__</label>
+        <input type="text" id="year1-input" required /> 
+        
+        <label for="student-name-input">नाव:</label>
+        <input type="text" id="student-name-input" required />
+        
+        <label for="student-class-input">इयत्ता:</label>
+        <input type="text" id="student-class-input" required />
+        
+        <label for="student-roll-input">क्रमांक:</label>
+        <input type="number" id="student-roll-input" required />
+        
+        <button type="submit">जतन करा</button>
+      </form>
+    </div>
+  </div> 
+  <div class="container">
+    <h1>Annual Report Input</h1>
+    <form id="report-form">
+      <h3>Marathi</h3>
+      <div class="subject-section">
+        
+        <div class="left">
+        <label for="marathi-sub1">तोंडी काम (एकूण 10)</label>
+        <input type="number" id="marathi-sub1" name="marathiSub1" placeholder="Enter Submark 1" max = "10" required>
+      
+        <label for="marathi-sub2">प्रात्यक्षिक (एकूण 10)</label>
+        <input type="number" id="marathi-sub2" name="marathiSub2" placeholder="Enter Submark 2" max = "10" required>
+      
+        <label for="marathi-sub3">उपक्रम (एकूण 10)</label>
+        <input type="number" id="marathi-sub3" name="marathiSub3" placeholder="Enter Submark 3" max = "10" required>
+      
+        <label for="marathi-sub4">चाचणी (एकूण 20)</label>
+        <input type="number" id="marathi-sub4" name="marathiSub4" placeholder="Enter Submark 4" max = "20" required> 
+      
+        <label for="marathi-sub5">वर्ग काम (एकूण 10)</label>
+        <input type="number" id="marathi-sub5" name="marathiSub5" placeholder="Enter Submark 5" max = "10" required>
+      </div>
+      <div class="right">
+        <label for="marathi-sub6">तोंडी(एकूण 10)</label>
+        <input type="number" id="marathi-sub6" name="marathiSub7" placeholder="Enter Submark 6" max = "10" required>
+
+        <label for="marathi-sub7">लेखी(एकूण 30)</label>
+        <input type="number" id="marathi-sub7" name="marathiSub7" placeholder="Enter Submark 7" max = "30" required>
+      </div>
+        <!-- Display total -->
+        <div class="total-box">
+          Total Marks(A): <span id="marathi-total">0</span>
+        </div>
+        <div class="total-box">
+          Total Marks(B): <span id="marathi-total2">0</span>
+        </div>
+      
+        <!-- Dropdown for pre-defined notes -->
+        <label for="marathi-notes">Marathi Notes</label>
+        <select id="marathi-notes" name="marathiNotes">
+          <option value="नेहमी वर्गात लक्ष देतो">नेहमी वर्गात लक्ष देतो</option>
+          <option value="शुद्धलेखनात प्रगती करणे आवश्यक आहे">शुद्धलेखनात प्रगती करणे आवश्यक आहे</option>
+          <option value="आपल्या बोलीभाषेत प्रमाण भाषेचा वापर करतो.">आपल्या बोलीभाषेत प्रमाण भाषेचा वापर करतो.</option>
+          <option value="दिलेला उतारा वाक्य वाचन करतो.">दिलेला उतारा वाक्य वाचन करतो.</option>
+          <option value="उतारा कथा वाक्य अचूक वाचन करतो.">उतारा कथा वाक्य अचूक वाचन करतो.</option>
+          <option value="स्वतःचे अनुभव प्रमाण भोषेत कथन करतो.">स्वतःचे अनुभव प्रमाण भोषेत कथन करतो.</option>
+          <option value="बोलण्याची भाषा लाघवी व सुंदर आहे.">बोलण्याची भाषा लाघवी व सुंदर आहे.</option>
+          <option value="कविता तालासुरात गायन करतो.">कविता तालासुरात गायन करतो.</option>
+          <option value="स्वतःच्या भावना प्रणाण भाषेत मांडतो.">स्वतःच्या भावना प्रणाण भाषेत मांडतो.</option>
+          <option value="शब्द वाक्य जसेच्या तसे प्रकट करतो.">शब्द वाक्य जसेच्या तसे प्रकट करतो.</option>
+          <option value="प्रकट व मौन वाचन करतो.">प्रकट व मौन वाचन करतो.</option>
+          <option value="शब्द वाक्य लेखन अचूकपणे करतो.">शब्द वाक्य लेखन अचूकपणे करतो.</option>
+          <option value="लेखनात चूका करत नाही.">लेखनात चूका करत नाही.</option>
+          <option value="दिलेल्या सूचना लक्षपूर्वक वाचन करतो.">दिलेल्या सूचना लक्षपूर्वक वाचन करतो.</option>
+          <option value="दिलेल्या सूचनेचा अर्थ समजून घेत नाही.">दिलेल्या सूचनेचा अर्थ समजून घेत नाही.</option>
+          <option value="सुचविलेला भाग वाचन करताना चूका करतो.">सुचविलेला भाग वाचन करताना चूका करतो.</option>
+          <option value="वाचन व लेखन करताना जोडक्षर चूकीचे लिहतो.">वाचन व लेखन करताना जोडक्षर चूकीचे लिहतो.</option>
+          <option value=" सुचविलेल्या प्रसंगाचे सादरीकरण करता येत नाही."> सुचविलेल्या प्रसंगाचे सादरीकरण करता येत नाही.</option>
+          <option value="मजकूर पाहून लिहताना चूका करतो.">मजकूर पाहून लिहताना चूका करतो.</option>
+          <option value="मौन व प्रकट वाचन करता येत नाही..">मौन व प्रकट वाचन करता येत नाही..</option>
+          <option value="स्वतःच्या भावना मते योग्य भाषेत मांडता येत नाहीत.">स्वतःच्या भावना मते योग्य भाषेत मांडता येत नाहीत.</option>
+          <option value="सहजपणे प्रमाण भाषेचा वापर करत नाही.">सहजपणे प्रमाण भाषेचा वापर करत नाही.</option>
+          <option value=" बोलताना बोली भाषेचा वापर अधिक करतो."> बोलताना बोली भाषेचा वापर अधिक करतो.</option>
+          <option value="Custom">Custom</option>
+        </select>
+        <textarea id="custom-marathi-notes" name="customMarathiNotes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+      
+      <!-- Example for Math Subject -->
+      <h3>Math</h3>
+      <div class="subject-section">
+        
+        <div class="left">
+        <label for="math-sub1">तोंडी काम (एकूण 10)</label>
+        <input type="number" id="math-sub1" name="mathSub1" placeholder="Enter Submark 1" max = "10" required>
+
+        <label for="math-sub2">प्रात्यक्षिक (एकूण 10)</label>
+        <input type="number" id="math-sub2" name="mathSub2" placeholder="Enter Submark 2" max = "10" required>
+
+        <label for="math-sub3">उपक्रम (एकूण 10)</label>
+        <input type="number" id="math-sub3" name="mathSub3" placeholder="Enter Submark 3" max = "10" required>
+
+        <label for="math-sub4">चाचणी (एकूण 20)</label>
+        <input type="number" id="math-sub4" name="mathSub4" placeholder="Enter Submark 4" max = "20" required>
+
+        <label for="math-sub5">वर्ग काम (एकूण 10)</label>
+        <input type="number" id="math-sub5" name="mathSub5" placeholder="Enter Submark 5" max = "10" required>
+      </div>
+      <div class="right">
+        <label for="math-sub6">तोंडी(एकूण 10)</label>
+        <input type="number" id="math-sub6" name="mathSub7" placeholder="Enter Submark 6" max = "10" required>
+
+        <label for="math-sub7">लेखी(एकूण 30)</label>
+        <input type="number" id="math-sub7" name="mathSub7" placeholder="Enter Submark 7" max = "30" required>
+      </div>
+        <!-- Display total -->
+        <div class="total-box">
+          Total Marks(A): <span id="math-total">0</span>
+        </div>
+        <div class="total-box">
+          Total Marks(B): <span id="math-total2">0</span> 
+        </div>   
+
+        <!-- Dropdown for pre-defined notes -->
+        <label for="math-notes">Math Notes</label> 
+        <select id="math-notes" name="mathNotes">
+          <option value="सुचविलेल्या संख्या वाचन करतो.">सुचविलेल्या संख्या वाचन करतो.</option>
+          <option value="सूचविलेल्या संख्यांचे अचूक लेखन करतो.">सूचविलेल्या संख्यांचे अचूक लेखन करतो.</option>
+          <option value="संख्या वाचन व लेखन करतो.">संख्या वाचन व लेखन करतो.</option>
+          <option value="विविध प्रकारच्या संख्या ओळखून सांगतो.">विविध प्रकारच्या संख्या ओळखून सांगतो.</option>
+          <option value="एक, दोन , तीन अंकी संख्या अचूक लेखन करतो.">एक, दोन , तीन अंकी संख्या अचूक लेखन करतो.</option>
+          <option value="दिलेल्या संख्याचा क्रम अचूक लावतो.">दिलेल्या संख्याचा क्रम अचूक लावतो.</option>
+          <option value="मापनाची विविध परिमाणे व उपयोग सांगतो.">मापनाची विविध परिमाणे व उपयोग सांगतो.</option>
+          <option value="संख्याचे अंकात वअक्षरात लेखन करतो.">संख्याचे अंकात वअक्षरात लेखन करतो.</option>
+          <option value="संख्याचे लेखन व नावे अचूक सांगतो.">संख्याचे लेखन व नावे अचूक सांगतो.</option>
+          <option value="गणीताचे व्यवहारीक जीवनात उपयोग करतो.">गणीताचे व्यवहारीक जीवनात उपयोग करतो.</option>
+          <option value="दैनंदिन जीवनात गणन क्रिया चुकवतो.">दैनंदिन जीवनात गणन क्रिया चुकवतो.</option>
+          <option value="रुपये व पैशाचे साधे साधे व्यवहार करता येत नाहीत.">रुपये व पैशाचे साधे साधे व्यवहार करता येत नाहीत.</option>
+          <option value="संख्याचे वाचन व लेखन करता येत नाही.">संख्याचे वाचन व लेखन करता येत नाही.</option>
+          <option value=" गणिती चिन्हाबाबत चूकीची प्रतिक्रिया देतो."> गणिती चिन्हाबाबत चूकीची प्रतिक्रिया देतो.</option>
+          <option value=" गणिती संख्या वाचन व लेखन करताना चूका करतो."> गणिती संख्या वाचन व लेखन करताना चूका करतो.</option>
+          <option value="गणिताचे महत्व व उपयोग सांगता येत नाही.">गणिताचे महत्व व उपयोग सांगता येत नाही.</option>
+          <option value="मापनाची परीमाणे व उपयोग समजत नाहीत.">मापनाची परीमाणे व उपयोग समजत नाहीत.</option>
+          <option value="साध्या व सोप्या गणितीय क्रिया चूकतो.">साध्या व सोप्या गणितीय क्रिया चूकतो.</option>
+          <option value="साधे व सोपे हिशोब करता येत नाहीत.">साधे व सोपे हिशोब करता येत नाहीत.</option>
+          <option value="दिलेल्या उदाहरणाची कृती करता येत नाही.">दिलेल्या उदाहरणाची कृती करता येत नाही.</option>
+          <option value="Custom">Custom</option>
+        </select>
+        <textarea id="custom-math-notes" name="customMathNotes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+
+      <!-- Example for English Subject -->
+      <h3>English</h3>
+      <div class="subject-section">
+        
+        <div class="left">
+        <label for="english-sub1">तोंडी काम (एकूण 10)</label>
+        <input type="number" id="english-sub1" name="englishSub1" placeholder="Enter Submark 1" max = "10" required>
+
+        <label for="english-sub2">प्रात्यक्षिक (एकूण 10)</label>
+        <input type="number" id="english-sub2" name="englishSub2" placeholder="Enter Submark 2" max = "10" required>
+
+        <label for="english-sub3">उपक्रम (एकूण 10)</label>
+        <input type="number" id="english-sub3" name="englishSub3" placeholder="Enter Submark 3" max = "10" required>
+
+        <label for="english-sub4">चाचणी (एकूण 20)</label>
+        <input type="number" id="english-sub4" name="englishSub4" placeholder="Enter Submark 4" max = "20" required>
+
+        <label for="english-sub5">वर्ग काम (एकूण 10)</label>
+        <input type="number" id="english-sub5" name="englishSub5" placeholder="Enter Submark 5" max = "10" required>
+      </div>
+        <div class="right">
+          <label for="english-sub6">तोंडी(एकूण 10)</label>
+          <input type="number" id="english-sub6" name="englishSub7" placeholder="Enter Submark 6" max = "10" required>
+  
+          <label for="english-sub7">लेखी(एकूण 30)</label>
+          <input type="number" id="english-sub7" name="englishSub7" placeholder="Enter Submark 7" max = "30" required>
+        </div>
+        <!-- Display total -->
+        <div class="total-box">
+          Total Marks(A): <span id="english-total">0</span>
+        </div>
+        <div class="total-box">
+          Total Marks(B): <span id="english-total2">0</span>
+        </div>
+
+        <!-- Dropdown for pre-defined notes -->
+        <label for="english-notes">English Notes</label>
+        <select id="english-notes" name="englishNotes">
+          <option value="Reads fluently and writes creatively">Reads fluently and writes creatively</option>
+          <option value="Improvement needed in grammar">Improvement needed in grammar</option>
+          <option value="Excellent vocabulary">Excellent vocabulary</option>
+          <option value="Listen and classify.">Listen and classify.</option>
+          <option value="Follow instructions, commands and requests."> Follow instructions, commands and requests.</option>
+          <option value="Listen and sequence the events.">Listen and sequence the events.</option>
+          <option value="Listen and repeat as per model.">Listen and repeat as per model.</option>
+          <option value="Listen and identify the picture/objects."> Listen and identify the picture/objects.</option>
+          <option value="Follow the chain of instructions.">Follow the chain of instructions.</option>
+          <option value="Listen to material with the help of audio and video devices.">Listen to material with the help of audio and video devices.</option>
+          <option value="He talk with impurity words.">He talk with impurity words.</option>
+          <option value="He can’t talk with good rhythm.">He can’t talk with good rhythm.</option>
+          <option value="He do not listen anyone.">He do not listen anyone.</option>
+          <option value="He do mistakes in writing.">He do mistakes in writing.</option>
+          <option value="He can’t do act as suggested.">He can’t do act as suggested.</option>
+          <option value=" He can’t sing poem with acting."> He can’t sing poem with acting.</option>
+          <option value=" He makes mistakes in listening."> He makes mistakes in listening.</option>
+          <option value="He don’t read sentences properly.">He don’t read sentences properly.</option>
+          <option value="Listen and write wrong.">Listen and write wrong.</option>
+          <option value="He stumble in reading sentences.">He stumble in reading sentences.</option>
+          <option value="Custom">Custom</option>
+        </select>
+        <textarea id="custom-english-notes" name="customEnglishNotes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+      <h3>Science 1</h3>
+      <div class="subject-section">
+        <div class="left">
+        <label for="science1-sub1">प्रकल्प (एकूण 10)</label>
+        <input type="number" id="science1-sub1" name="science1Sub1" placeholder="Enter Submark 1" max = "10" required>
+      
+        <label for="science1-sub2">प्रायोगिक (एकूण 10)</label>
+        <input type="number" id="science1-sub2" name="science1Sub2" placeholder="Enter Submark 2" max = "10" required>
+      
+        <label for="science1-sub3">उपक्रम (एकूण 10)</label>
+        <input type="number" id="science1-sub3" name="science1Sub3" placeholder="Enter Submark 3" max = "10" required>
+      
+        <label for="science1-sub4">चाचणी (एकूण 20)</label>
+        <input type="number" id="science1-sub4" name="science1Sub4" placeholder="Enter Submark 4" max = "20" required>
+      
+        <label for="science1-sub5">वर्ग काम (एकूण 10)</label>
+        <input type="number" id="science1-sub5" name="science1Sub5" placeholder="Enter Submark 5" max = "10" required>
+      </div>
+        <div class="right"> 
+          <label for="science1-sub6">तोंडी(एकूण 10)</label>
+          <input type="number" id="science1-sub6" name="science1Sub7" placeholder="Enter Submark 6" max = "10" required>
+  
+          <label for="science1-sub7">लेखी(एकूण 30)</label>
+          <input type="number" id="science1-sub7" name="science1Sub7" placeholder="Enter Submark 7" max = "30" required>
+        </div>
+        <!-- Display total -->
+        <div class="total-box">
+          Total Marks(A): <span id="science1-total">0</span>
+        </div>
+        <div class="total-box">
+          Total Marks(B): <span id="science1-total2">0</span>
+        </div>  
+      
+        <!-- Dropdown for pre-defined notes -->
+        <label for="science1-notes">Science 1 Notes</label>
+        <select id="science1-notes" name="science1Notes">
+          <option value="परीसरातील घटकांविषयी माहिती सांगतो.">परीसरातील घटकांविषयी माहिती सांगतो.</option>
+          <option value="विविध लहान लहान प्रयोग स्वतः करतो.">विविध लहान लहान प्रयोग स्वतः करतो.</option>
+          <option value="आरोग्यदायी सवयीचे पालन करतो.">आरोग्यदायी सवयीचे पालन करतो.</option>
+          <option value="असे का घडले? असे प्रश्न सतत विचारतो.">असे का घडले? असे प्रश्न सतत विचारतो.</option>
+          <option value="स्वतःला पडलेले प्रश्न विचारतो.">स्वतःला पडलेले प्रश्न विचारतो.</option>
+          <option value="वैज्ञानिक विषयावरील प्रश्न विचारतो.">वैज्ञानिक विषयावरील प्रश्न विचारतो.</option>
+          <option value="परीसरातील विविध घटकांची तात्काळ नोंद घेतो.">परीसरातील विविध घटकांची तात्काळ नोंद घेतो.</option>
+          <option value="परीसरातील बदलांची माहिती स्वतः सांगतो.">परीसरातील बदलांची माहिती स्वतः सांगतो.</option>
+          <option value=" विज्ञानसंदर्भीत विवध कल्पना स्वतः सांगतो."> विज्ञानसंदर्भीत विवध कल्पना स्वतः सांगतो.</option>
+          <option value="विविध कोडी प्रश्न स्वतः सोडवतो.">विविध कोडी प्रश्न स्वतः सोडवतो.</option>
+          <option value="कोणत्याही घटनेचे कारण समजून घेत नाही.">कोणत्याही घटनेचे कारण समजून घेत नाही.</option>
+          <option value="विज्ञानात कोणत्याही विषयावर प्रश्न विचारत नाही.">विज्ञानात कोणत्याही विषयावर प्रश्न विचारत नाही.</option>
+          <option value=" परीसरातील घडलेल्या घटनांची माहिती सांगत नाही."> परीसरातील घडलेल्या घटनांची माहिती सांगत नाही.</option>
+          <option value="घडलेल्या घटनेबाबत खुळचट कल्पना मांडतो.">घडलेल्या घटनेबाबत खुळचट कल्पना मांडतो.</option>
+          <option value="ज्ञानेंद्रीयाची माहिती सांगता येत नाही.">ज्ञानेंद्रीयाची माहिती सांगता येत नाही.</option>
+          <option value="विचारलेल्या प्रश्नांची चूकीची उत्तरे देतो.">विचारलेल्या प्रश्नांची चूकीची उत्तरे देतो.</option>
+          <option value="सूचविलेले लहान लहान प्रयोग करताना घाबरतो.">सूचविलेले लहान लहान प्रयोग करताना घाबरतो.</option>
+          <option value="सूचविलेल्या घटनांची चुकूची कारणे सांगतो.">सूचविलेल्या घटनांची चुकूची कारणे सांगतो.</option>
+          <option value="केलेल्या कृतीचा क्रम सांगता येत नाही.">केलेल्या कृतीचा क्रम सांगता येत नाही.</option>
+          <option value="प्राचीन काळाची माहिती सांगता येत नाही.">प्राचीन काळाची माहिती सांगता येत नाही.</option>
+          <option value="Custom">Custom</option>
+        </select>
+        <textarea id="custom-science1-notes" name="customScience1Notes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+      <h3>Science 2</h3>
+      <div class="subject-section">
+        <div class="left">
+        <label for="science2-sub1">प्रकल्प (एकूण 10)</label>
+        <input type="number" id="science2-sub1" name="science2Sub1" placeholder="Enter Submark 1" max = "10" required>
+      
+        <label for="science2-sub2">प्रायोगिक (एकूण 10)</label>
+        <input type="number" id="science2-sub2" name="science2Sub2" placeholder="Enter Submark 2" max = "10" required>
+      
+        <label for="science2-sub3">उपक्रम (एकूण 10)</label>
+        <input type="number" id="science2-sub3" name="science2Sub3" placeholder="Enter Submark 3" max = "10" required>
+      
+        <label for="science2-sub4">चाचणी (एकूण 20)</label>
+        <input type="number" id="science2-sub4" name="science2Sub4" placeholder="Enter Submark 4" max = "20" required>
+      
+        <label for="science2-sub5">वर्ग काम (एकूण 10)</label>
+        <input type="number" id="science2-sub5" name="science2Sub5" placeholder="Enter Submark 5" max = "10" required>
+      </div>
+        <div class="right"> 
+          <label for="science2-sub6">तोंडी(एकूण 10)</label>
+          <input type="number" id="science2-sub6" name="science2Sub7" placeholder="Enter Submark 6" max = "10" required>
+  
+          <label for="science2-sub7">लेखी(एकूण 30)</label>
+          <input type="number" id="science2-sub7" name="science2Sub7" placeholder="Enter Submark 7" max = "30" required>
+        </div>
+        <!-- Display total --> 
+        <div class="total-box"> 
+          Total Marks(A): <span id="science2-total">0</span>
+        </div>
+        <div class="total-box">
+          Total Marks(B): <span id="science2-total2">0</span>
+        </div>  
+      
+        <!-- Dropdown for pre-defined notes -->
+        <label for="science2-notes">Science 2 Notes</label>
+        <select id="science2-notes" name="science2Notes">
+          <option value="Experiments are accurate and detailed">Experiments are accurate and detailed</option>
+          <option value="Needs improvement in hypothesis framing">Needs improvement in hypothesis framing</option>
+          <option value="Exceptional problem-solving skills">Exceptional problem-solving skills</option>
+          <option value="Custom">Custom</option>
+        </select>
+        <textarea id="custom-science2-notes" name="customScience2Notes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+      
+
+      <!-- Submit Button -->
+      <button id="generate-report-btn" type="button">Generate Report</button>
+    </form>
+  </div>
+  <script src="script.js"></script> <!-- Link to external JS --> 
+</body>
+</html>
