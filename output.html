@@ -9,31 +9,41 @@
 <body>
   <div class="report-container">
     <h1>सातत्यपूर्ण सर्वंकष मूल्यमापन नोंदपत्र सत्र <span id="session">[Session]</span> सन 20<span id="year1"></span>-20<span id="year2"></span></h1>
-
+    <hr class="horiLine">
     <div class="student-details">
       <h3>विद्यार्थ्याचे नाव: <span id="student-name">[Name]</span></h3>
       <h3>इयत्ता: <span id="student-class">[Class]</span></h3>
       <h3>क्रमांक: <span id="student-roll">[Roll Number]</span></h3>
     </div>
-    <hr>
-    <h3>शाब्दिक वर्णनात्मक नोंदी</h3>
+    <hr class="horiLine">
+    <h3 id="nondiHeadline">शाब्दिक वर्णनात्मक नोंदी</h3>
+    <hr class="horiLine">
     <table> 
       <tbody>
+        
         <tr>
           <td>मराठी</td>
           <td id="marathi-notes-display"></td>
+          <td>परिसर-2</td>
+          <td id="science2-notes-display"></td>
         </tr>
         <tr>
           <td>परिसर-१</td>
           <td id="science1-notes-display"></td>
-        </tr>
-        <tr>
-          <td>इंग्रजी</td>
-          <td id="math-notes-display"></td>
+          <td>कला</td>
+          <td id="kalaa-notes-display"></td>
         </tr>
         <tr>
           <td>गणित</td>
+          <td id="math-notes-display"></td>
+          <td>कार्यानुभव</td>
+          <td id="karyanubhav-notes-display"></td>
+        </tr>
+        <tr>
+          <td>इंग्रजी</td>
           <td id="english-notes-display"></td>
+          <td>शा.शि.</td>
+          <td id="shashi-notes-display"></td>
         </tr>
       </tbody>
     </table>
@@ -237,6 +247,105 @@
           <td id="science2-sub6-display"></td>
           <td id="science2-pratya"></td>
           <td id="science2-sub7-display"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">5</td>
+          <td rowspan="2">कला</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>30</th>
+          <th>30</th>
+          <th>40</th>
+          <th>-</th>
+          <th>-</th>
+          <th>-</th>
+          <th >100</th>
+          <td class="BLANK"></td>
+          <td class="BLANK"></td>
+          <td class="BLANK"></td>
+          <th id="kalaa-total-display2" rowspan="2"></th>
+          <th id="total-kalaa3" rowspan="2"></th>
+          <th id="grade-kalaa" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="kalaa-sub1-display"></td>
+          <td id="kalaa-sub2-display"></td>
+          <td id="kalaa-sub3-display"></td>
+          <td id="kalaa-prakalp">-</td>
+          <td id="kalaa-sub4-display">-</td>
+          <td id="kalaa-sub5-display">-</td>
+          <td id="kalaa-total-display"></td>
+          <td id="kalaa-sub6-display" class="BLANK"></td>
+          <td id="kalaa-pratya" class="BLANK"></td>
+          <td id="kalaa-sub7-display" class="BLANK"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">5</td>
+          <td rowspan="2">कार्यानुभव</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>30</th>
+          <th>30</th>
+          <th>40</th>
+          <th>-</th>
+          <th>-</th> 
+          <th>-</th>
+          <th>100</th>
+          <td class="BLANK"></td>
+          <td class="BLANK"></td>
+          <td class="BLANK"></td>
+          <th id="karyanubhav-total-display2" rowspan="2"></th>
+          <th id="total-karyanubhav3" rowspan="2"></th>
+          <th id="grade-karyanubhav" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="karyanubhav-sub1-display"></td>
+          <td id="karyanubhav-sub2-display"></td>
+          <td id="karyanubhav-sub3-display"></td>
+          <td id="karyanubhav-prakalp">-</td>
+          <td id="karyanubhav-sub4-display">-</td>
+          <td id="karyanubhav-sub5-display">-</td>
+          <td id="karyanubhav-total-display"></td>
+          <td id="karyanubhav-sub6-display" class="BLANK"></td>
+          <td id="karyanubhav-pratya" class="BLANK"></td>
+          <td id="karyanubhav-sub7-display" class="BLANK"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">5</td>
+          <td rowspan="2">शा.शि.</td>
+          <th>एकूण</th>
+          <th>-</th>
+          <th>30</th>
+          <th>30</th>
+          <th>40</th>
+          <th>-</th>
+          <th>-</th>
+          <th>-</th>
+          <th>100</th>
+          <td  class="BLANK"></td>
+          <td  class="BLANK"></td>
+          <td  class="BLANK"></td>
+          <th id="shashi-total-display2" rowspan="2"></th>
+          <th id="total-shashi3" rowspan="2"></th>
+          <th id="grade-shashi" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td>प्राप्त</td>
+          <td>-</td>
+          <td id="shashi-sub1-display"></td>
+          <td id="shashi-sub2-display"></td>
+          <td id="shashi-sub3-display"></td>
+          <td id="shashi-prakalp">-</td>
+          <td id="shashi-sub4-display">-</td>
+          <td id="shashi-sub5-display">-</td>
+          <td id="shashi-total-display"></td>
+          <td id="shashi-sub6-display" class="BLANK"></td>
+          <td id="shashi-pratya" class="BLANK"></td>
+          <td id="shashi-sub7-display" class="BLANK"></td>
         </tr>
         
       </tbody>

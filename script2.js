@@ -129,6 +129,54 @@ if (science2Data) {
     science2Data.notes === "Custom" ? science2Data.customNotes : science2Data.notes;
     
 }
+const kalaaData = JSON.parse(localStorage.getItem("kalaaData"));
+if (kalaaData) {
+  document.getElementById("kalaa-sub1-display").textContent = kalaaData.sub1;
+  document.getElementById("kalaa-sub2-display").textContent = kalaaData.sub2;
+  document.getElementById("kalaa-sub3-display").textContent = kalaaData.sub3;
+  document.getElementById("kalaa-sub4-display").textContent = "-";
+  document.getElementById("kalaa-sub5-display").textContent = "-";
+  document.getElementById("kalaa-sub6-display").textContent = "-";
+ document.getElementById("kalaa-sub7-display").textContent =  "-";
+ document.getElementById("kalaa-total-display").textContent = kalaaData.total;
+ document.getElementById("kalaa-total-display2").textContent = "0";
+ document.getElementById("total-kalaa3").textContent =kalaaData.total;
+  document.getElementById("kalaa-notes-display").textContent =
+    kalaaData.notes === "Custom" ? kalaaData.customNotes : kalaaData.notes;
+    
+}
+const karyanubhavData = JSON.parse(localStorage.getItem("karyanubhavData"));
+if (karyanubhavData) {
+  document.getElementById("karyanubhav-sub1-display").textContent = karyanubhavData.sub1;
+  document.getElementById("karyanubhav-sub2-display").textContent = karyanubhavData.sub2;
+  document.getElementById("karyanubhav-sub3-display").textContent = karyanubhavData.sub3;
+  document.getElementById("karyanubhav-sub4-display").textContent = "-";
+  document.getElementById("karyanubhav-sub5-display").textContent = "-";
+  document.getElementById("karyanubhav-sub6-display").textContent = "-";
+ document.getElementById("karyanubhav-sub7-display").textContent =  "-";
+ document.getElementById("karyanubhav-total-display").textContent = karyanubhavData.total;
+ document.getElementById("karyanubhav-total-display2").textContent = "0";
+ document.getElementById("total-karyanubhav3").textContent =karyanubhavData.total;
+  document.getElementById("karyanubhav-notes-display").textContent =
+    karyanubhavData.notes === "Custom" ? karyanubhavData.customNotes : karyanubhavData.notes;
+    
+}
+const shashiData = JSON.parse(localStorage.getItem("shashiData"));
+if (shashiData) {
+  document.getElementById("shashi-sub1-display").textContent = shashiData.sub1;
+  document.getElementById("shashi-sub2-display").textContent = shashiData.sub2;
+  document.getElementById("shashi-sub3-display").textContent = shashiData.sub3;
+  document.getElementById("shashi-sub4-display").textContent = "-";
+  document.getElementById("shashi-sub5-display").textContent = "-";
+  document.getElementById("shashi-sub6-display").textContent = "-";
+ document.getElementById("shashi-sub7-display").textContent =  "-";
+ document.getElementById("shashi-total-display").textContent = shashiData.total;
+ document.getElementById("shashi-total-display2").textContent = "0";
+ document.getElementById("total-shashi3").textContent =shashiData.total;
+  document.getElementById("shashi-notes-display").textContent =
+    shashiData.notes === "Custom" ? shashiData.customNotes : shashiData.notes;
+    
+}
 
 function calculateGrade(marks) {
   if (marks >= 91) return "A1";
@@ -148,6 +196,9 @@ function assignGrades() {
   const science1Total = parseInt(document.getElementById("total-science13").textContent) || 0;
   const science2Total = parseInt(document.getElementById("total-science23").textContent) || 0;
   const englishTotal = parseInt(document.getElementById("english-total3").textContent) || 0;
+  const kalaaTotal = parseInt(document.getElementById("total-kalaa3").textContent) || 0;
+  const karyanubhavTotal = parseInt(document.getElementById("total-karyanubhav3").textContent) || 0;
+  const shashiTotal = parseInt(document.getElementById("total-shashi3").textContent) || 0;
 
   // Calculate grades
   const marathiGrade = calculateGrade(marathiTotal);
@@ -155,6 +206,9 @@ function assignGrades() {
   const science1Grade = calculateGrade(science1Total);
   const science2Grade = calculateGrade(science2Total);
   const englishGrade = calculateGrade(englishTotal);
+  const kalaaGrade = calculateGrade(kalaaTotal);
+  const karyanubhavGrade = calculateGrade(karyanubhavTotal);
+  const shashiGrade = calculateGrade(shashiTotal);
 
   // Set grades in the respective grade cells
   document.getElementById("grade-marathi").textContent = marathiGrade;
@@ -162,6 +216,9 @@ function assignGrades() {
   document.getElementById("grade-science1").textContent = science1Grade;
   document.getElementById("grade-science2").textContent = science2Grade;
   document.getElementById("grade-english").textContent = englishGrade;
+  document.getElementById("grade-kalaa").textContent = kalaaGrade;
+  document.getElementById("grade-karyanubhav").textContent = karyanubhavGrade;
+  document.getElementById("grade-shashi").textContent = shashiGrade;
 }
 
 
@@ -174,6 +231,9 @@ localStorage.removeItem("science1Data");
 localStorage.removeItem("science2Data"); 
 localStorage.removeItem("mathData");
 localStorage.removeItem("englishData");
+localStorage.removeItem("kalaaData");
+localStorage.removeItem("karyanubhavData");
+localStorage.removeItem("shashiData");
 
 // Redirect to index.html if the page is refreshed
 // window.addEventListener("load", function () {

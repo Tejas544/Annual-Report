@@ -41,6 +41,19 @@ function calculateTotalA(subject) {
   
     document.getElementById(`${subject}-total`).innerText = total;
   }
+function calculateTotal(subject) {
+    const inputs = document.querySelectorAll(`#${subject}-sub1, #${subject}-sub2, #${subject}-sub3`);
+    let total = 0;
+  
+    inputs.forEach(input => {
+      const value = parseInt(input.value, 10);
+      if (!isNaN(value)) {
+        total += value;  
+      }
+    });
+  
+    document.getElementById(`${subject}-total`).innerText = total;
+  }
 function calculateTotalB(subject) {
     const inputs = document.querySelectorAll(`#${subject}-sub6, #${subject}-sub7`);
     let total = 0;
@@ -99,6 +112,18 @@ function calculateTotalB(subject) {
   science1Inputs2.forEach(input => {
     input.addEventListener("input", () => calculateTotalB("science1"));
   });
+  const kalaaInputs = document.querySelectorAll("#kalaa-sub1, #kalaa-sub2, #kalaa-sub3");
+  kalaaInputs.forEach(input => {
+    input.addEventListener("input", () => calculateTotal("kalaa"));
+  });
+  const karyanubhavInputs = document.querySelectorAll("#karyanubhav-sub1, #karyanubhav-sub2, #karyanubhav-sub3");
+  karyanubhavInputs.forEach(input => {
+    input.addEventListener("input", () => calculateTotal("karyanubhav"));
+  });
+  const shashiInputs = document.querySelectorAll("#shashi-sub1, #shashi-sub2, #shashi-sub3");
+  shashiInputs.forEach(input => {
+    input.addEventListener("input", () => calculateTotal("shashi"));
+  });
   
   // Show/hide custom notes textarea based on dropdown selection
   function handleCustomNotes(subject) {
@@ -120,6 +145,9 @@ function calculateTotalB(subject) {
   handleCustomNotes("science2");
   handleCustomNotes("english");
   handleCustomNotes("math");
+  handleCustomNotes("kalaa");
+  handleCustomNotes("karyanubhav");
+  handleCustomNotes("shashi");
   
   
   document.getElementById("generate-report-btn").addEventListener("click", function () {
@@ -130,7 +158,10 @@ function calculateTotalB(subject) {
       science1: [10, 10, 10, 20, 10,10,30],
       science2: [10, 10, 10, 20, 10,10,30],
       english: [10, 10, 10, 20, 10,10,30],
-      math: [10, 10, 10, 20, 10,10,30]
+      math: [10, 10, 10, 20, 10,10,30],
+      kalaa: [30,30,40],
+      karyanubhav: [30,30,40],
+      shashi: [30,30,40]
   };
 
   // Validation function
@@ -219,12 +250,42 @@ function calculateTotalB(subject) {
       notes: document.getElementById("math-notes").value || "",
       customNotes: document.getElementById("custom-math-notes").value || "",
     };
+    const kalaaData = {
+      sub1: document.getElementById("kalaa-sub1").value || 0,
+      sub2: document.getElementById("kalaa-sub2").value || 0,
+      sub3: document.getElementById("kalaa-sub3").value || 0,
+      total: document.getElementById("kalaa-total").textContent || 0,
+      //total3: document.getElementById("kalaa-total").textContent  + document.getElementById("kalaa-total2").textContent ,
+      notes: document.getElementById("kalaa-notes").value || "",
+      customNotes: document.getElementById("custom-kalaa-notes").value || "",
+    };
+    const karyanubhavData = {
+      sub1: document.getElementById("karyanubhav-sub1").value || 0,
+      sub2: document.getElementById("karyanubhav-sub2").value || 0,
+      sub3: document.getElementById("karyanubhav-sub3").value || 0,
+      total: document.getElementById("karyanubhav-total").textContent || 0,
+      //total3: document.getElementById("karyanubhav-total").textContent  + document.getElementById("karyanubhav-total2").textContent ,
+      notes: document.getElementById("karyanubhav-notes").value || "",
+      customNotes: document.getElementById("custom-karyanubhav-notes").value || "",
+    };
+    const shashiData = {
+      sub1: document.getElementById("shashi-sub1").value || 0,
+      sub2: document.getElementById("shashi-sub2").value || 0,
+      sub3: document.getElementById("shashi-sub3").value || 0,
+      total: document.getElementById("shashi-total").textContent || 0,
+      //total3: document.getElementById("shashi-total").textContent  + document.getElementById("shashi-total2").textContent ,
+      notes: document.getElementById("shashi-notes").value || "",
+      customNotes: document.getElementById("custom-shashi-notes").value || "",
+    };
     if (
       !validateMarks("marathi", marathiData) ||
       !validateMarks("science1", science1Data) ||
       !validateMarks("science2", science1Data) ||
       !validateMarks("english", englishData) ||
-      !validateMarks("math", mathData)
+      !validateMarks("math", mathData)||
+      !validateMarks("kalaa", kalaaData) ||
+      !validateMarks("karyanubhav", karyanubhavData) ||
+      !validateMarks("shashi", shashiData) 
   ) {
       return; // Stop execution if validation fails
   }
@@ -235,6 +296,9 @@ function calculateTotalB(subject) {
     localStorage.setItem("science2Data", JSON.stringify(science1Data));
     localStorage.setItem("englishData", JSON.stringify(englishData));
     localStorage.setItem("mathData", JSON.stringify(mathData));
+    localStorage.setItem("kalaaData", JSON.stringify(kalaaData));
+    localStorage.setItem("karyanubhavData", JSON.stringify(karyanubhavData));
+    localStorage.setItem("shashiData", JSON.stringify(shashiData));
     
     // Redirect to Output Page
     window.location.href = "output.html"; 

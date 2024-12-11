@@ -227,10 +227,10 @@
       <h3>Science 1</h3>
       <div class="subject-section">
         <div class="left">
-        <label for="science1-sub1">प्रकल्प (एकूण 10)</label>
+        <label for="science1-sub1">तोंडी काम (एकूण 10)</label>
         <input type="number" id="science1-sub1" name="science1Sub1" placeholder="Enter Submark 1" max = "10" required>
       
-        <label for="science1-sub2">प्रायोगिक (एकूण 10)</label>
+        <label for="science1-sub2">प्रात्यक्षिक (एकूण 10)</label>
         <input type="number" id="science1-sub2" name="science1Sub2" placeholder="Enter Submark 2" max = "10" required>
       
         <label for="science1-sub3">उपक्रम (एकूण 10)</label>
@@ -287,10 +287,10 @@
       <h3>Science 2</h3>
       <div class="subject-section">
         <div class="left">
-        <label for="science2-sub1">प्रकल्प (एकूण 10)</label>
+        <label for="science2-sub1">तोंडी काम (एकूण 10)</label>
         <input type="number" id="science2-sub1" name="science2Sub1" placeholder="Enter Submark 1" max = "10" required>
       
-        <label for="science2-sub2">प्रायोगिक (एकूण 10)</label>
+        <label for="science2-sub2">प्रात्यक्षिक (एकूण 10)</label>
         <input type="number" id="science2-sub2" name="science2Sub2" placeholder="Enter Submark 2" max = "10" required>
       
         <label for="science2-sub3">उपक्रम (एकूण 10)</label>
@@ -326,6 +326,82 @@
           <option value="Custom">Custom</option>
         </select>
         <textarea id="custom-science2-notes" name="customScience2Notes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+      <h3>कला</h3>
+      <div class="subject-section">
+        <div class="left">
+        <label for="kalaa-sub1">तोंडी काम(एकूण 30)</label>
+        <input type="number" id="kalaa-sub1" name="kalaaSub1" placeholder="Enter Submark 1" max = "30" required>
+      
+        <label for="kalaa-sub2">प्रात्यक्षिक (एकूण 30)</label>
+        <input type="number" id="kalaa-sub2" name="kalaaSub2" placeholder="Enter Submark 2" max = "30" required>
+      
+        <label for="kalaa-sub3">उपक्रम (एकूण 40)</label>
+        <input type="number" id="kalaa-sub3" name="kalaaSub3" placeholder="Enter Submark 3" max = "40" required>
+      </div>
+      <div class="total-box"> 
+        Total Marks(A): <span id="kalaa-total">0</span>
+      </div>
+      <!-- Dropdown for pre-defined notes -->
+      <label for="kalaa-notes">कला Notes</label>
+      <select id="kalaa-notes" name="kalaaNotes">
+        <option value="Experiments are accurate and detailed">Experiments are accurate and detailed</option>
+        <option value="Needs improvement in hypothesis framing">Needs improvement in hypothesis framing</option>
+        <option value="Exceptional problem-solving skills">Exceptional problem-solving skills</option>
+        <option value="Custom">Custom</option>
+      </select>
+      <textarea id="custom-kalaa-notes" name="customkalaaNotes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+
+      <h3>कार्यानुभव</h3>
+      <div class="subject-section">
+        <div class="left">
+        <label for="karyanubhav-sub1">तोंडी काम(एकूण 30)</label>
+        <input type="number" id="karyanubhav-sub1" name="karyanubhavSub1" placeholder="Enter Submark 1" max = "30" required>
+      
+        <label for="karyanubhav-sub2">प्रात्यक्षिक (एकूण 30)</label>
+        <input type="number" id="karyanubhav-sub2" name="karyanubhavSub2" placeholder="Enter Submark 2" max = "30" required>
+      
+        <label for="karyanubhav-sub3">उपक्रम (एकूण 40)</label>
+        <input type="number" id="karyanubhav-sub3" name="karyanubhavSub3" placeholder="Enter Submark 3" max = "40" required>
+      </div>
+      <div class="total-box"> 
+        Total Marks(A): <span id="karyanubhav-total">0</span>
+      </div>
+      <!-- Dropdown for pre-defined notes -->
+      <label for="karyanubhav-notes">कार्यानुभव Notes</label>
+      <select id="karyanubhav-notes" name="karyanubhavNotes">
+        <option value="Experiments are accurate and detailed">Experiments are accurate and detailed</option>
+        <option value="Needs improvement in hypothesis framing">Needs improvement in hypothesis framing</option>
+        <option value="Exceptional problem-solving skills">Exceptional problem-solving skills</option>
+        <option value="Custom">Custom</option>
+      </select>
+      <textarea id="custom-karyanubhav-notes" name="customkaryanubhavNotes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
+      </div>
+      <h3>शा.शि.</h3>
+      <div class="subject-section">
+        <div class="left">
+        <label for="shashi-sub1">तोंडी काम(एकूण 30)</label>
+        <input type="number" id="shashi-sub1" name="shashiSub1" placeholder="Enter Submark 1" max = "30" required>
+      
+        <label for="shashi-sub2">प्रात्यक्षिक (एकूण 30)</label>
+        <input type="number" id="shashi-sub2" name="shashiSub2" placeholder="Enter Submark 2" max = "30" required>
+      
+        <label for="shashi-sub3">उपक्रम (एकूण 40)</label>
+        <input type="number" id="shashi-sub3" name="shashiSub3" placeholder="Enter Submark 3" max = "40" required>
+      </div>
+      <div class="total-box"> 
+        Total Marks(A): <span id="shashi-total">0</span>
+      </div>
+      <!-- Dropdown for pre-defined notes -->
+      <label for="shashi-notes">शा.शि. Notes</label>
+      <select id="shashi-notes" name="shashiNotes">
+        <option value="Experiments are accurate and detailed">Experiments are accurate and detailed</option>
+        <option value="Needs improvement in hypothesis framing">Needs improvement in hypothesis framing</option>
+        <option value="Exceptional problem-solving skills">Exceptional problem-solving skills</option>
+        <option value="Custom">Custom</option>
+      </select>
+      <textarea id="custom-shashi-notes" name="customshashiNotes" placeholder="Enter custom note if selected" style="display: none;"></textarea>
       </div>
       
 
