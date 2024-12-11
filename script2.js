@@ -136,8 +136,8 @@ if (kalaaData) {
   document.getElementById("kalaa-sub3-display").textContent = kalaaData.sub3;
   document.getElementById("kalaa-sub4-display").textContent = "-";
   document.getElementById("kalaa-sub5-display").textContent = "-";
-  document.getElementById("kalaa-sub6-display").textContent = "-";
- document.getElementById("kalaa-sub7-display").textContent =  "-";
+  document.getElementById("kalaa-sub6-display").textContent = "";
+ document.getElementById("kalaa-sub7-display").textContent =  "";
  document.getElementById("kalaa-total-display").textContent = kalaaData.total;
  document.getElementById("kalaa-total-display2").textContent = "0";
  document.getElementById("total-kalaa3").textContent =kalaaData.total;
@@ -152,8 +152,8 @@ if (karyanubhavData) {
   document.getElementById("karyanubhav-sub3-display").textContent = karyanubhavData.sub3;
   document.getElementById("karyanubhav-sub4-display").textContent = "-";
   document.getElementById("karyanubhav-sub5-display").textContent = "-";
-  document.getElementById("karyanubhav-sub6-display").textContent = "-";
- document.getElementById("karyanubhav-sub7-display").textContent =  "-";
+  document.getElementById("karyanubhav-sub6-display").textContent = "";
+ document.getElementById("karyanubhav-sub7-display").textContent =  "";
  document.getElementById("karyanubhav-total-display").textContent = karyanubhavData.total;
  document.getElementById("karyanubhav-total-display2").textContent = "0";
  document.getElementById("total-karyanubhav3").textContent =karyanubhavData.total;
@@ -168,8 +168,8 @@ if (shashiData) {
   document.getElementById("shashi-sub3-display").textContent = shashiData.sub3;
   document.getElementById("shashi-sub4-display").textContent = "-";
   document.getElementById("shashi-sub5-display").textContent = "-";
-  document.getElementById("shashi-sub6-display").textContent = "-";
- document.getElementById("shashi-sub7-display").textContent =  "-";
+  document.getElementById("shashi-sub6-display").textContent = "";
+ document.getElementById("shashi-sub7-display").textContent =  "";
  document.getElementById("shashi-total-display").textContent = shashiData.total;
  document.getElementById("shashi-total-display2").textContent = "0";
  document.getElementById("total-shashi3").textContent =shashiData.total;
