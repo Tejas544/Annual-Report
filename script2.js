@@ -19,6 +19,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   assignGrades();
 });
+document.getElementById("print-btn").addEventListener("click", function () {
+  window.print();
+});
+window.addEventListener("load", function () {
+  // Check navigation type (reload or direct load)
+  const navigationType = performance.getEntriesByType("navigation")[0]?.type || performance.navigation.type;
+  console.log("Navigation Type:", navigationType); // Debug log
+
+  if (navigationType === "reload" || navigationType === 1) {
+    console.log("Page reloaded. Clearing localStorage and redirecting...");
+
+    // Clear localStorage
+    localStorage.removeItem("session");
+    localStorage.removeItem("year1");
+    // localStorage.removeItem("year2");
+    localStorage.removeItem("studentName");
+    localStorage.removeItem("studentClass");
+    localStorage.removeItem("studentRoll");
+
+    // Redirect to index.html
+    console.log("Redirecting to index.html...");
+    window.location.href = "index.html";
+  }
+});
 
 // Retrieve Marathi Data from LocalStorage
 const marathiData = JSON.parse(localStorage.getItem("marathiData"));
@@ -142,6 +166,8 @@ function assignGrades() {
 
 
 
+
+
 // Clear LocalStorage after usage to prevent old data issues
 localStorage.removeItem("marathiData");
 localStorage.removeItem("science1Data"); 
@@ -164,24 +190,4 @@ localStorage.removeItem("englishData");
 //   } 
 // });
 
-window.addEventListener("load", function () {
-  // Check navigation type (reload or direct load)
-  const navigationType = performance.getEntriesByType("navigation")[0]?.type || performance.navigation.type;
-  console.log("Navigation Type:", navigationType); // Debug log
 
-  if (navigationType === "reload" || navigationType === 1) {
-    console.log("Page reloaded. Clearing localStorage and redirecting...");
-
-    // Clear localStorage
-    localStorage.removeItem("session");
-    localStorage.removeItem("year1");
-    // localStorage.removeItem("year2");
-    localStorage.removeItem("studentName");
-    localStorage.removeItem("studentClass");
-    localStorage.removeItem("studentRoll");
-
-    // Redirect to index.html
-    console.log("Redirecting to index.html...");
-    window.location.href = "index.html";
-  }
-});

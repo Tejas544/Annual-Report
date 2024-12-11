@@ -6,9 +6,9 @@ body {
   }
   
   .report-container {
-    max-width: 900px;
+    max-width: auto;
     margin: auto;
-    background: white;
+    background: #fff;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -46,5 +46,14 @@ body {
   }
   .report-footer p {
     margin :0;
+  }
+  .cont{
+    display: flex;
+    justify-content: center;
+  }
+  #print-btn {
+    border: none;
+    background-color: #fff;
+    
   }
   
